@@ -1,0 +1,169 @@
+body, html {
+    margin:0px; /*Это хорошая практика обнулять поля и отсупы, т.к. различные браузеры их по-разному воспринимают. */
+    padding:0px;
+    text-align:center; /*Выравниваем макет по центру в старых версиях браузеров */
+    font-family: 'Helvetica', serif;
+    font-size: 12pt;
+    color: black;
+    background: white;
+    }
+
+    
+    hr {
+        color: purple;
+         border-bottom: 0;
+        
+    }
+    #container{
+    margin:0 auto;  /*выравниваем макет по центру в современных браузерах */
+    text-align:left;  /*Отменяем tex-align:center заданное в Body. Делаем чтобы весь текст в макете выравнивался по левому краю */
+    min-width:550px;  /*задаем минимальную ширину макета в современных браузерах */
+    width:expression(   /*задаем минимальную ширину макета в старых версия браузера. Просто замените цифру на свою шиирину :) */
+    (document.compatMode && document.compatMode == 'CSS1Compat')
+    ?
+    (
+    document.documentElement.clientWidth < 550
+    ?
+    "550px"
+    :
+    "auto"
+    )
+    :
+    (
+    document.body.clientWidth < 550
+    ?
+    "550px"
+    :
+    "auto"
+    )
+    );
+    }
+    /*Здесь пишем стили для шапки сайта */
+    #header{
+    background-color:#659DBD ;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-family: "Helvetica";
+        font-size: 22px;
+    }
+    #header h1 {
+        margin: 0; /* Обнуляем отступы для заголовка первого уровня, находящегося в шапке. Это нужно обязательно де-лать, при использовании заголовков. Если используются параграфы, то тоже нужно обнулить отступы для них. */
+        padding: 10px 0; /* Задаем поля */
+
+    }
+    /*Здесь пишем стили для левой колонки сайта */
+    #left{
+    background-color:#659DBD ;
+    width:200px;  /*ширина колонки */
+    float:left;  /*обязательное выравнивание по левому краю, с включением обтекания*/
+    }
+    
+    /*Здесь пишем стили для блока контента */
+    #content{
+    background-color: white;
+    margin:0px; /*обнуляем отступы сверху и снизу*/
+    margin-left:152px; /*обязательный отступ слева, должен быть немного больше ширины левой колонки */
+    padding: 20px 100px;
+    }
+    #content h1 {
+    margin:0px 0 20px 0; /* Обнуляем отступы для заголовка первого уровня, находящегося в блоке контента.*/
+    } 
+    textarea {
+        height: 200px;
+    }
+    #content p {
+    margin:0px; /* Обнуляем отступы для параграфов я, находящегося в блоке контента.*/
+    padding:5px; /*задаем поля, т.е. чтобы был промежуток между строками, чтобы было понятно, что это параграф :)*/
+    }
+    /*атрибут, который опускает подвал сайта ниже всех блоков. Нужен для корректной работы макета. */
+   
+    /*Здесь пишем стили для подвала сайта */
+    #footer{
+    background-color:#63b9da;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    }
+    #footer p{
+    margin:0px;  /* обнуляем отступы*/
+    padding: 10px 0; /*  задаем поля */
+    }
+
+    .menutitle {
+        FONT-WEIGHT: bold; FONT-SIZE: 1.05em; PADDING-BOTTOM: 5px; COLOR: white; PADDING-TOP: 3px;  LETTER-SPACING: 0.15em;TEXT-ALIGN: center; background-color:#659DBD ; MARGIN: 3px; 
+        line-height: 15px;}
+    
+    #menu {
+        FLOAT: left;  PADDING-TOP: 0px; TEXT-ALIGN: left;}
+    #menu A {
+        FONT-WEIGHT: normal; FONT-SIZE: 13pt; COLOR: black; TEXT-DECORATION: none;}
+    #menu A:hover {
+        TEXT-DECORATION: underline;}
+    #menu UL {
+        PADDING-RIGHT: 0px; PADDING-LEFT: 10px; PADDING-BOTTOM: 0px; MARGIN: 0px; LINE-HEIGHT: 20px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none; TEXT-ALIGN: left;}
+    #menu LI {
+        BORDER-RIGHT: #b1bdfd 0px solid; BORDER-TOP: #b1bdfd 0px solid;
+         MARGIN: 0px; BORDER-LEFT: #b1bdfd 0px solid; BORDER-BOTTOM: #ffffff 1px solid; padding: 10px 0 10px 5px;}
+    
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        
+        p, li {
+            font-size: 20px;
+        }
+        
+        h1, a {
+            font-size: 41px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin: 40px 0 10px 0;
+        }
+        
+        * {
+            font-family: Arial;
+        }
+        
+        td {
+            padding: 5px 10px;
+        }
+        
+        hr {
+            margin: 0 0 8px 0;
+        }
+        
+        .photo2 {
+            margin-right: 20px;
+        }
+        
+        ol {
+            margin: 20px 0;
+        }
+
+        .oaoa {
+            display: flex;
+            justify-content: flex-start;
+            width: 1000px;
+            margin-bottom: 30px;
+        }
+        input {
+            width: 100px;
+            margin-right: 14px;
+        }
+        .text-input {
+            width: 200px;
+            height: 20px;
+        }
