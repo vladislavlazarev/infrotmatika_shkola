@@ -1,0 +1,1 @@
+# infrotmatika_shkola
